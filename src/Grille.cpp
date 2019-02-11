@@ -64,30 +64,41 @@ void Grille::setCase(unsigned int x, unsigned int y, const Case & c) {
 void Grille::affichage() {
     for (int i = 0; i < dimX; ++i) {
         for (int j = 0; j < dimY; ++j) {
-            std::cout<<"| "<<grid[i*dimX+j].getMotif()<<" ";
+            std::cout<<"| "<<grid[j*dimX+i].getMotif()<<" ";
         }
         std::cout<<"|"<<std::endl;
     }
 }
 
 bool Grille::gagneHorizontal() {
-    for (int i = 0; i < dimX; ++i) {
-        for (int j = 0; j < dimY; ++j) {
-
+    for (unsigned int i = 0; i < dimX; ++i) {
+        if (getCase(i, 0)== getCase(i, 1) && getCase(i, 0)==getCase(i, 2) && getCase(i, 0).getMotif() != " ") {
+            return true;
         }
     }
     return false;
 }
 
 bool Grille::gagneVertical() {
+    for (unsigned int j = 0; j < dimY; ++j) {
+        if (getCase(0, j)== getCase(1, j) && getCase(0, j)==getCase(2, j) && getCase(0, j).getMotif() != " ") {
+            return true;
+        }
+    }
     return false;
 }
 
 bool Grille::gagneDiag() {
+    if (getCase(0, 0)==getCase(1, 1) && getCase(0, 0)==getCase(2, 2) && getCase(0, 0).getMotif() != " ") {
+        return true;
+    }
     return false;
 }
 
 bool Grille::gagneAntiDiag() {
+    if (getCase(0, 2)==getCase(1, 1) && getCase(0, 0)==getCase(2, 0)  && getCase(0, 0).getMotif() != " ") {
+        return true;
+    }
     return false;
 }
 

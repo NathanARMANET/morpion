@@ -23,7 +23,7 @@ void Case::setMotif(const std::string &motif) {
 }
 
 bool Case::operator==(const Case &rhs) const {
-    return motif == rhs.motif;
+    return motif == rhs.motif && motif != " ";
 }
 
 bool Case::operator!=(const Case &rhs) const {
