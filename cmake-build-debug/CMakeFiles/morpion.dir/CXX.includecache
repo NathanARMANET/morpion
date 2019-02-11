@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/main.cpp
+iostream
+-
+src/Grille.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
+string
+-
+
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+Case.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
+
