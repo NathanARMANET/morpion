@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Grille.h"
+#include <assert.h>
 
 
 Grille::Grille() {
