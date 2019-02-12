@@ -5,8 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/main.cpp" "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/cmake-build-debug/CMakeFiles/morpion.dir/main.cpp.o"
+  "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.cpp" "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/cmake-build-debug/CMakeFiles/morpion.dir/src/ArbreGrilleIA.cpp.o"
   "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.cpp" "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/cmake-build-debug/CMakeFiles/morpion.dir/src/Case.cpp.o"
   "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.cpp" "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/cmake-build-debug/CMakeFiles/morpion.dir/src/Grille.cpp.o"
+  "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/IA.cpp" "/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/cmake-build-debug/CMakeFiles/morpion.dir/src/IA.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

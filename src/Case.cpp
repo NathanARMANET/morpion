@@ -6,13 +6,15 @@
 
 Case::Case() {
     this->motif = " ";
+    this->value = 0;
 }
 
 Case::Case(const std::string &motif) : motif(motif) {
     this->motif = motif;
+    this->value = 0;
 }
 
-Case::~Case() {}
+
 
 const std::string &Case::getMotif() const {
     return motif;
@@ -21,6 +23,15 @@ const std::string &Case::getMotif() const {
 void Case::setMotif(const std::string &motif) {
     Case::motif = motif;
 }
+
+int Case::getValue() const {
+    return value;
+}
+
+void Case::setValue(int value) {
+    Case::value = value;
+}
+
 
 bool Case::operator==(const Case &rhs) const {
     return motif == rhs.motif && motif != " ";

@@ -11,6 +11,14 @@ iostream
 -
 src/Grille.h
 /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+src/ArbreGrilleIA.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
+
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
+vector
+-
+Grille.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
 
 /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
 string

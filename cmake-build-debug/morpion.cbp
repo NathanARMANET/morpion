@@ -83,6 +83,12 @@
 		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/main.cpp">
 			<Option target="morpion"/>
 		</Unit>
+		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.cpp">
+			<Option target="morpion"/>
+		</Unit>
+		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h">
+			<Option target="morpion"/>
+		</Unit>
 		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.cpp">
 			<Option target="morpion"/>
 		</Unit>
@@ -93,6 +99,12 @@
 			<Option target="morpion"/>
 		</Unit>
 		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h">
+			<Option target="morpion"/>
+		</Unit>
+		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/IA.cpp">
+			<Option target="morpion"/>
+		</Unit>
+		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/IA.h">
 			<Option target="morpion"/>
 		</Unit>
 		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/CMakeLists.txt">

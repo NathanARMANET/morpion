@@ -21,10 +21,6 @@ Grille::Grille(unsigned int dimX, unsigned int dimY) : dimX(dimX), dimY(dimY) {
     this->grid = new Case[this->dimX * this->dimY];
 }
 
-Grille::~Grille() {
-    delete this->grid;
-}
-
 Case *Grille::getGrille() const {
     return grid;
 }
@@ -61,8 +57,10 @@ void Grille::setCase(unsigned int x, unsigned int y, const Case & c) {
     grid[y*dimX+x] = c;
 }
 
-void Grille::affichage() {
+void Grille::affichage() const {
+    std::cout<<"|   | 1 | 2 | 3 |"<<std::endl;
     for (int i = 0; i < dimX; ++i) {
+        std::cout<<"| "<<i+1<<" ";
         for (int j = 0; j < dimY; ++j) {
             std::cout<<"| "<<grid[j*dimX+i].getMotif()<<" ";
         }
@@ -70,38 +68,64 @@ void Grille::affichage() {
     }
 }
 
-bool Grille::gagneHorizontal() {
+bool Grille::gagneHorizontal(std::string & joueur) {
     for (unsigned int i = 0; i < dimX; ++i) {
         if (getCase(i, 0)== getCase(i, 1) && getCase(i, 0)==getCase(i, 2) && getCase(i, 0).getMotif() != " ") {
+            joueur = getCase(i, 0).getMotif();
             return true;
         }
     }
     return false;
 }
 
-bool Grille::gagneVertical() {
+bool Grille::gagneVertical(std::string & joueur) {
     for (unsigned int j = 0; j < dimY; ++j) {
         if (getCase(0, j)== getCase(1, j) && getCase(0, j)==getCase(2, j) && getCase(0, j).getMotif() != " ") {
+            joueur = getCase(0, j).getMotif();
             return true;
         }
     }
     return false;
 }
 
-bool Grille::gagneDiag() {
+bool Grille::gagneDiag(std::string & joueur) {
     if (getCase(0, 0)==getCase(1, 1) && getCase(0, 0)==getCase(2, 2) && getCase(0, 0).getMotif() != " ") {
+        joueur = getCase(0, 0).getMotif();
         return true;
     }
     return false;
 }
 
-bool Grille::gagneAntiDiag() {
+bool Grille::gagneAntiDiag(std::string & joueur) {
     if (getCase(0, 2)==getCase(1, 1) && getCase(0, 0)==getCase(2, 0)  && getCase(0, 0).getMotif() != " ") {
+        joueur = getCase(0, 0).getMotif();
         return true;
     }
     return false;
 }
 
-bool Grille::gagne() {
-    return gagneHorizontal()||gagneVertical()||gagneDiag()||gagneAntiDiag();
+bool Grille::gagne(std::string & joueur) {
+    return gagneHorizontal(joueur)||gagneVertical(joueur)||gagneDiag(joueur)||gagneAntiDiag(joueur);
+}
+
+bool Grille::complet() {
+    for (int i = 0; i < dimX; ++i) {
+        for (int j = 0; j < dimY; ++j) {
+            if (getCase(i, j).getMotif() == " ") {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+Grille & Grille::operator=(Grille g) {
+    for (int i = 0; i < dimX; ++i) {
+        for (int j = 0; j < dimY; ++j) {
+            setCase(i, j, g.getCase(i, j));
+        }
+    }
+
+    return *this;
 }

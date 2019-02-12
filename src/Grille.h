@@ -20,8 +20,6 @@ public:
 
     Grille(unsigned int dimX, unsigned int dimY);
 
-    virtual ~Grille();
-
     Case *getGrille() const;
 
     void setGrille(Case * grid);
@@ -38,17 +36,21 @@ public:
 
     void setCase(unsigned int x, unsigned int y, const Case & c);
 
-    void affichage();
+    void affichage() const;
 
-    bool gagneHorizontal();
+    bool gagneHorizontal(std::string & joueur);
 
-    bool gagneVertical();
+    bool gagneVertical(std::string & joueur);
 
-    bool gagneDiag();
+    bool gagneDiag(std::string & joueur);
 
-    bool gagneAntiDiag();
+    bool gagneAntiDiag(std::string & joueur);
 
-    bool gagne();
+    bool gagne(std::string & joueur);
+
+    bool complet();
+
+    Grille & operator = (Grille g);
 };
 
 

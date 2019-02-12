@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/ArbreGrilleIA.o: src/ArbreGrilleIA.cpp.o
+
+.PHONY : src/ArbreGrilleIA.o
+
+# target to build an object file
+src/ArbreGrilleIA.cpp.o:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/ArbreGrilleIA.cpp.o
+.PHONY : src/ArbreGrilleIA.cpp.o
+
+src/ArbreGrilleIA.i: src/ArbreGrilleIA.cpp.i
+
+.PHONY : src/ArbreGrilleIA.i
+
+# target to preprocess a source file
+src/ArbreGrilleIA.cpp.i:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/ArbreGrilleIA.cpp.i
+.PHONY : src/ArbreGrilleIA.cpp.i
+
+src/ArbreGrilleIA.s: src/ArbreGrilleIA.cpp.s
+
+.PHONY : src/ArbreGrilleIA.s
+
+# target to generate assembly for a file
+src/ArbreGrilleIA.cpp.s:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/ArbreGrilleIA.cpp.s
+.PHONY : src/ArbreGrilleIA.cpp.s
+
 src/Case.o: src/Case.cpp.o
 
 .PHONY : src/Case.o
@@ -204,6 +231,33 @@ src/Grille.cpp.s:
 	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/Grille.cpp.s
 .PHONY : src/Grille.cpp.s
 
+src/IA.o: src/IA.cpp.o
+
+.PHONY : src/IA.o
+
+# target to build an object file
+src/IA.cpp.o:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/IA.cpp.o
+.PHONY : src/IA.cpp.o
+
+src/IA.i: src/IA.cpp.i
+
+.PHONY : src/IA.i
+
+# target to preprocess a source file
+src/IA.cpp.i:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/IA.cpp.i
+.PHONY : src/IA.cpp.i
+
+src/IA.s: src/IA.cpp.s
+
+.PHONY : src/IA.s
+
+# target to generate assembly for a file
+src/IA.cpp.s:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/IA.cpp.s
+.PHONY : src/IA.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,12 +270,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/ArbreGrilleIA.o"
+	@echo "... src/ArbreGrilleIA.i"
+	@echo "... src/ArbreGrilleIA.s"
 	@echo "... src/Case.o"
 	@echo "... src/Case.i"
 	@echo "... src/Case.s"
 	@echo "... src/Grille.o"
 	@echo "... src/Grille.i"
 	@echo "... src/Grille.s"
+	@echo "... src/IA.o"
+	@echo "... src/IA.i"
+	@echo "... src/IA.s"
 .PHONY : help
 
 

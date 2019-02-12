@@ -1,11 +1,14 @@
 #include <iostream>
 #include "src/Grille.h"
+#include "src/ArbreGrilleIA.h"
+
 
 int main() {
-    Grille * g = new Grille();
-    std::string J1 = "X";
-    std::string J2 = "O";
+    Grille g;
+    g.getCase(0, 0).setMotif("X");
+    ArbreGrilleIA IA;
 
-    g->affichage();
-    return 0;
+    IA.remplirArbre(g, "O");
+
+    std::cout<<IA.minMax(9, false)<<std::endl;
 }

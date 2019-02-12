@@ -12,18 +12,21 @@ class Case {
 private:
 
     std::string motif;
+    int value;
 
 public:
 
     Case();
 
-    Case(const std::string &motif);
-
-    virtual ~Case();
+    explicit Case(const std::string &motif);
 
     const std::string &getMotif() const;
 
     void setMotif(const std::string &motif);
+
+    int getValue() const;
+
+    void setValue(int value);
 
     bool operator==(const Case &rhs) const;
 
