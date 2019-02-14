@@ -6,6 +6,7 @@ CMakeFiles/morpion.dir/main.cpp.o
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+ /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h
 CMakeFiles/morpion.dir/src/ArbreGrilleIA.cpp.o
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.cpp
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
@@ -18,6 +19,9 @@ CMakeFiles/morpion.dir/src/Grille.cpp.o
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.cpp
  /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
-CMakeFiles/morpion.dir/src/IA.cpp.o
- /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/IA.cpp
- /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/IA.h
+CMakeFiles/morpion.dir/src/Jeu.cpp.o
+ /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
+ /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
+ /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+ /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.cpp
+ /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h

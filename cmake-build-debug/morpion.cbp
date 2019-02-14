@@ -101,10 +101,10 @@
 		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h">
 			<Option target="morpion"/>
 		</Unit>
-		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/IA.cpp">
+		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.cpp">
 			<Option target="morpion"/>
 		</Unit>
-		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/IA.h">
+		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h">
 			<Option target="morpion"/>
 		</Unit>
 		<Unit filename="/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/CMakeLists.txt">

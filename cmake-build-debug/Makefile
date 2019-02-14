@@ -231,32 +231,32 @@ src/Grille.cpp.s:
 	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/Grille.cpp.s
 .PHONY : src/Grille.cpp.s
 
-src/IA.o: src/IA.cpp.o
+src/Jeu.o: src/Jeu.cpp.o
 
-.PHONY : src/IA.o
+.PHONY : src/Jeu.o
 
 # target to build an object file
-src/IA.cpp.o:
-	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/IA.cpp.o
-.PHONY : src/IA.cpp.o
+src/Jeu.cpp.o:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/Jeu.cpp.o
+.PHONY : src/Jeu.cpp.o
 
-src/IA.i: src/IA.cpp.i
+src/Jeu.i: src/Jeu.cpp.i
 
-.PHONY : src/IA.i
+.PHONY : src/Jeu.i
 
 # target to preprocess a source file
-src/IA.cpp.i:
-	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/IA.cpp.i
-.PHONY : src/IA.cpp.i
+src/Jeu.cpp.i:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/Jeu.cpp.i
+.PHONY : src/Jeu.cpp.i
 
-src/IA.s: src/IA.cpp.s
+src/Jeu.s: src/Jeu.cpp.s
 
-.PHONY : src/IA.s
+.PHONY : src/Jeu.s
 
 # target to generate assembly for a file
-src/IA.cpp.s:
-	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/IA.cpp.s
-.PHONY : src/IA.cpp.s
+src/Jeu.cpp.s:
+	$(MAKE) -f CMakeFiles/morpion.dir/build.make CMakeFiles/morpion.dir/src/Jeu.cpp.s
+.PHONY : src/Jeu.cpp.s
 
 # Help Target
 help:
@@ -279,9 +279,9 @@ help:
 	@echo "... src/Grille.o"
 	@echo "... src/Grille.i"
 	@echo "... src/Grille.s"
-	@echo "... src/IA.o"
-	@echo "... src/IA.i"
-	@echo "... src/IA.s"
+	@echo "... src/Jeu.o"
+	@echo "... src/Jeu.i"
+	@echo "... src/Jeu.s"
 .PHONY : help
 
 

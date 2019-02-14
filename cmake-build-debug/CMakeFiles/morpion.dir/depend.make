@@ -5,6 +5,7 @@ CMakeFiles/morpion.dir/main.cpp.o: ../main.cpp
 CMakeFiles/morpion.dir/main.cpp.o: ../src/ArbreGrilleIA.h
 CMakeFiles/morpion.dir/main.cpp.o: ../src/Case.h
 CMakeFiles/morpion.dir/main.cpp.o: ../src/Grille.h
+CMakeFiles/morpion.dir/main.cpp.o: ../src/Jeu.h
 
 CMakeFiles/morpion.dir/src/ArbreGrilleIA.cpp.o: ../src/ArbreGrilleIA.cpp
 CMakeFiles/morpion.dir/src/ArbreGrilleIA.cpp.o: ../src/ArbreGrilleIA.h
@@ -18,6 +19,9 @@ CMakeFiles/morpion.dir/src/Grille.cpp.o: ../src/Case.h
 CMakeFiles/morpion.dir/src/Grille.cpp.o: ../src/Grille.cpp
 CMakeFiles/morpion.dir/src/Grille.cpp.o: ../src/Grille.h
 
-CMakeFiles/morpion.dir/src/IA.cpp.o: ../src/IA.cpp
-CMakeFiles/morpion.dir/src/IA.cpp.o: ../src/IA.h
+CMakeFiles/morpion.dir/src/Jeu.cpp.o: ../src/ArbreGrilleIA.h
+CMakeFiles/morpion.dir/src/Jeu.cpp.o: ../src/Case.h
+CMakeFiles/morpion.dir/src/Jeu.cpp.o: ../src/Grille.h
+CMakeFiles/morpion.dir/src/Jeu.cpp.o: ../src/Jeu.cpp
+CMakeFiles/morpion.dir/src/Jeu.cpp.o: ../src/Jeu.h
 
