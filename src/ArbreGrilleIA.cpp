@@ -1,6 +1,10 @@
-//
-// Created by Nathan ARMANET on 2019-02-11.
-//
+/**
+ * @file ArbreGrilleIA.cpp
+ * Gestion de l'IA du jeu Morpion
+ * @author ARMANET Nathan, NAAJI Dorian
+ * @version 1.0
+ * @date 16/02/2019
+ */
 
 #include <iostream>
 #include "ArbreGrilleIA.h"
@@ -38,7 +42,7 @@ int ArbreGrilleIA::minMax(unsigned int & x, unsigned int & y, unsigned int dept,
     int bestValue;
 
     if (this->g.gagne(joueur)) {
-        /**
+        /*
          * Cas ou un joueur a gagné un apartie
          */
         x = this->x;
@@ -47,7 +51,7 @@ int ArbreGrilleIA::minMax(unsigned int & x, unsigned int & y, unsigned int dept,
         bestValue = (joueur == "O") ? 10 : -10;
 
     }else if (dept == 0 || this->children.empty()) {
-        /**
+        /*
          * Cas ou la partie est un match nulle
          */
         x = this->x;

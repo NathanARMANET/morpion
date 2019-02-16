@@ -1,6 +1,10 @@
-//
-// Created by Nathan ARMANET on 2019-02-14.
-//
+/**
+ * @file Jeu.cpp
+ * Gestion du jeu Morpion
+ * @author ARMANET Nathan, NAAJI Dorian
+ * @version 1.0
+ * @date 16/02/2019
+ */
 
 #include <iostream>
 #include "Jeu.h"
@@ -16,11 +20,11 @@ Jeu::Jeu() {
     mode = -1;
 }
 
-bool Jeu::read(unsigned int & value, Grille * g) {
+bool Jeu::read(unsigned int & value) {
     // on ne fait pas la distinction entre la dimX et la dimY de la grille car la taille du morpion restera 3*3.
     // Si on venait à faire un morpion avec des dimensions X et Y différentes, il faudrait en revanche vérifier la saisie de la valeur en fonction de
     // la saisie en cours (colonne ou ligne)
-    while( ! (std::cin >> value) || value > g->getDimX() || value < 0 )
+    while( ! (std::cin >> value) || value > grille->getDimX() || value < 0 )
     {
         // s'il y a un problème d'EOF
         if(std::cin.eof())
@@ -36,7 +40,7 @@ bool Jeu::read(unsigned int & value, Grille * g) {
             std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' );
         }
             // si l'utilisateur saisit une valeur hors de la grille
-        else if(value > g->getDimX() || value < 0)
+        else if(value > grille->getDimX() || value < 0)
         {
             std::cout << "Votre saisie est hors de la grille, recommencez."<<std::endl;
         }
@@ -44,19 +48,19 @@ bool Jeu::read(unsigned int & value, Grille * g) {
     return true;
 }
 
-void Jeu::readLineAndCol(unsigned int &line, unsigned int &col, Grille* g) {
+void Jeu::readLineAndCol() {
     std::cin.clear();
     std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' );
     std::cout <<"Veuillez choisir la colonne"<<std::endl;
-    if(read(col, g))
+    if(read(col))
     {
         // on rappelle le choix fait
         std::cout << "Vous avez choisi la colonne : " << col << std::endl;
-        if(read(line, g))
+        if(read(row))
         {
             std::cout <<"Veuillez choisir la ligne"<<std::endl;
             // on rappelle le choix fait
-            std::cout << "Vous avez choisi la ligne : " << line << std::endl;
+            std::cout << "Vous avez choisi la ligne : " << row << std::endl;
         }
     }
 }
@@ -101,19 +105,19 @@ void Jeu::PvP() {
         // on demande à l'utilisateur de saisir une colonne
         std::cout<<"Joueur 1 : Entrez la colonne ou vous souhaitez placer votre pion."<<std::endl;
         // si la saisie est correcte
-        if(read(col, grille))
+        if(read(col))
         {
             // on rappelle le choix fait
             std::cout << "Vous avez choisi la colonne : " << col << std::endl;
             std::cout<<"Joueur 1 : Entrez la ligne ou vous souhaitez placer votre pion."<<std::endl;
-            if(read(row, grille))
+            if(read(row))
             {
                 // on rappelle le choix fait
                 std::cout << "Vous avez choisi la ligne : " << row << std::endl;
                 while(grille->getCase(row - 1, col - 1).getMotif() != " ")
                 {
                     std::cerr << "Un pion est deja place ici ! Recommencez. " <<std::endl;
-                    readLineAndCol(row, col, grille);
+                    readLineAndCol();
                 }
             }
         }
@@ -142,13 +146,13 @@ void Jeu::PvP() {
             // on demande à l'utilisateur de saisir une colonne
             std::cout<<"Joueur 2 : Entrez la colonne ou vous souhaitez placer votre pion."<<std::endl;
             // si la saisie est correcte
-            if(read(col, grille))
+            if(read(col))
             {
                 // on rappelle le choix fait
                 std::cout << "Vous avez choisi la colonne : " << col << std::endl;
                 std::cout << "Joueur 2 : Entrez la ligne ou vous souhaitez placer votre pion." << std::endl;
 
-                if(read(row, grille))
+                if(read(row))
                 {
                     if(grille->getCase(row-1, col-1).getMotif() != " ")
                     {
@@ -158,7 +162,7 @@ void Jeu::PvP() {
                     while(grille->getCase(row - 1, col - 1).getMotif() != " ")
                     {
                         std::cerr << "Un pion est deja place ici ! Recommencez. " <<std::endl;
-                        readLineAndCol(row, col, grille);
+                        readLineAndCol();
                     }
                 }
             }
@@ -197,19 +201,19 @@ void Jeu::PvIA_minMax() {
         // on demande à l'utilisateur de saisir une colonne
         std::cout<<"Joueur 1 : Entrez la colonne ou vous souhaitez placer votre pion."<<std::endl;
         // si la saisie est correcte
-        if(read(col, grille))
+        if(read(col))
         {
             // on rappelle le choix fait
             std::cout << "Vous avez choisi la colonne : " << col << std::endl;
             std::cout<<"Joueur 1 : Entrez la ligne ou vous souhaitez placer votre pion."<<std::endl;
-            if(read(row, grille))
+            if(read(row))
             {
                 // on rappelle le choix fait
                 std::cout << "Vous avez choisi la ligne : " << row << std::endl;
                 while(grille->getCase(row - 1, col - 1).getMotif() != " ")
                 {
                     std::cerr << "Un pion est deja place ici ! Recommencez. " <<std::endl;
-                    readLineAndCol(row, col, grille);
+                    readLineAndCol();
                 }
             }
         }
@@ -280,19 +284,19 @@ void Jeu::PvIA_alphaBeta() {
         // on demande à l'utilisateur de saisir une colonne
         std::cout<<"Joueur 1 : Entrez la colonne ou vous souhaitez placer votre pion."<<std::endl;
         // si la saisie est correcte
-        if(read(col, grille))
+        if(read(col))
         {
             // on rappelle le choix fait
             std::cout << "Vous avez choisi la colonne : " << col << std::endl;
             std::cout<<"Joueur 1 : Entrez la ligne ou vous souhaitez placer votre pion."<<std::endl;
-            if(read(row, grille))
+            if(read(row))
             {
                 // on rappelle le choix fait
                 std::cout << "Vous avez choisi la ligne : " << row << std::endl;
                 while(grille->getCase(row - 1, col - 1).getMotif() != " ")
                 {
                     std::cerr << "Un pion est deja place ici ! Recommencez. " <<std::endl;
-                    readLineAndCol(row, col, grille);
+                    readLineAndCol();
                 }
             }
         }

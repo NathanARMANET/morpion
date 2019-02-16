@@ -1,6 +1,10 @@
-//
-// Created by Nathan ARMANET on 2019-02-04.
-//
+/**
+ * @file Grille.cpp
+ * Gestion de la grille
+ * @author ARMANET Nathan, NAAJI Dorian
+ * @version 1.0
+ * @date 16/02/2019
+ */
 
 #include <iostream>
 #include "Grille.h"
@@ -14,35 +18,12 @@ Grille::Grille() {
     this->grid = new Case[this->dimX * this->dimY];
 }
 
-Grille::Grille(unsigned int dimX, unsigned int dimY) : dimX(dimX), dimY(dimY) {
-    this->dimX = dimX;
-    this->dimY = dimY;
-
-    this->grid = new Case[this->dimX * this->dimY];
-}
-
-Case *Grille::getGrille() const {
-    return grid;
-}
-
-void Grille::setGrille(Case *grille) {
-    Grille::grid = grille;
-}
-
 unsigned int Grille::getDimX() const {
     return dimX;
 }
 
-void Grille::setDimX(unsigned int dimX) {
-    Grille::dimX = dimX;
-}
-
 unsigned int Grille::getDimY() const {
     return dimY;
-}
-
-void Grille::setDimY(unsigned int dimY) {
-    Grille::dimY = dimY;
 }
 
 Case & Grille::getCase(unsigned int x, unsigned int y) {
@@ -69,9 +50,9 @@ void Grille::affichage() const {
 }
 
 bool Grille::gagneHorizontal(std::string & joueur) {
-    for (unsigned int i = 0; i < dimX; ++i) {
-        if (getCase(i, 0)== getCase(i, 1) && getCase(i, 0)==getCase(i, 2) && getCase(i, 0).getMotif() != " ") {
-            joueur = getCase(i, 0).getMotif();
+    for (unsigned int j = 0; j < dimY; ++j) {
+        if (getCase(0, j)== getCase(1, j) && getCase(0, j)==getCase(2, j) && getCase(0, j).getMotif() != " ") {
+            joueur = getCase(0, j).getMotif();
             return true;
         }
     }
@@ -79,9 +60,9 @@ bool Grille::gagneHorizontal(std::string & joueur) {
 }
 
 bool Grille::gagneVertical(std::string & joueur) {
-    for (unsigned int j = 0; j < dimY; ++j) {
-        if (getCase(0, j)== getCase(1, j) && getCase(0, j)==getCase(2, j) && getCase(0, j).getMotif() != " ") {
-            joueur = getCase(0, j).getMotif();
+    for (unsigned int i = 0; i < dimX; ++i) {
+        if (getCase(i, 0)== getCase(i, 1) && getCase(i, 0)==getCase(i, 2) && getCase(i, 0).getMotif() != " ") {
+            joueur = getCase(i, 0).getMotif();
             return true;
         }
     }
@@ -127,5 +108,5 @@ Grille & Grille::operator=(Grille g) {
         }
     }
 
-    return *this;
+    return * this;
 }

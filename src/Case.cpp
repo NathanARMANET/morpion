@@ -1,20 +1,16 @@
-//
-// Created by Nathan ARMANET on 2019-02-04.
-//
+/**
+ * @file Case.cpp
+ * Gestion des cases du damier.
+ * @author ARMANET Nathan, NAAJI Dorian
+ * @version 1.0
+ * @date 16/02/2019
+ */
 
 #include "Case.h"
 
 Case::Case() {
     this->motif = " ";
-    this->value = 0;
 }
-
-Case::Case(const std::string &motif) : motif(motif) {
-    this->motif = motif;
-    this->value = 0;
-}
-
-
 
 const std::string &Case::getMotif() const {
     return motif;
@@ -23,15 +19,6 @@ const std::string &Case::getMotif() const {
 void Case::setMotif(const std::string &motif) {
     Case::motif = motif;
 }
-
-int Case::getValue() const {
-    return value;
-}
-
-void Case::setValue(int value) {
-    Case::value = value;
-}
-
 
 bool Case::operator==(const Case &rhs) const {
     return motif == rhs.motif && motif != " ";

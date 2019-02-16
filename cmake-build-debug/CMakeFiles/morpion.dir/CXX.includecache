@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/main.cpp
+iostream
+-
+src/Grille.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+src/ArbreGrilleIA.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
+src/Jeu.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h
+
 /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.cpp
 iostream
 -
@@ -18,11 +28,35 @@ vector
 Grille.h
 /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
 
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.cpp
+Case.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
+
 /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
 string
+-
+
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.cpp
+iostream
+-
+Grille.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+assert.h
 -
 
 /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
 Case.h
 /Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
+
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.cpp
+iostream
+-
+Jeu.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h
+
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h
+Grille.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+ArbreGrilleIA.h
+/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
 
