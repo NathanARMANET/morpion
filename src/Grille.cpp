@@ -97,7 +97,7 @@ bool Grille::gagneDiag(std::string & joueur) {
 }
 
 bool Grille::gagneAntiDiag(std::string & joueur) {
-    if (getCase(0, 2)==getCase(1, 1) && getCase(0, 0)==getCase(2, 0)  && getCase(0, 0).getMotif() != " ") {
+    if (getCase(0, 2)==getCase(1, 1) && getCase(0, 2)==getCase(2, 0)  && getCase(0, 2   ).getMotif() != " ") {
         joueur = getCase(0, 0).getMotif();
         return true;
     }
