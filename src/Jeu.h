@@ -32,8 +32,7 @@ public:
 
     void PvIA_minMax();
 
-
-
+    void PvIA_alphaBeta();
 };
 
 

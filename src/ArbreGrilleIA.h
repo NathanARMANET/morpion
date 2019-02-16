@@ -11,25 +11,19 @@
 
 class ArbreGrilleIA {
 private:
+
     Grille g;
     std::vector<ArbreGrilleIA> children;
-
-public:
     int value;
-
     unsigned int x, y;
 
-    Grille &getGrille();
+public:
 
-    void setGrille(const Grille &g);
-
-    std::vector<ArbreGrilleIA> &getChildren();
-
-    void setChildren(const std::vector<ArbreGrilleIA> &children);
-
-    void remplirArbre(const Grille g, std::string joueur);
+    void remplirArbre(Grille g, std::string joueur);
 
     int minMax(unsigned int & x, unsigned int & y, unsigned int dept, bool maximizingPlayer);
+
+    int alphaBeta(unsigned int & x, unsigned int & y, int alpha, int beta, bool maximizingPlayer);
 };
 
 

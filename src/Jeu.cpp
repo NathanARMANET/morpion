@@ -16,8 +16,7 @@ Jeu::Jeu() {
     mode = -1;
 }
 
-bool Jeu::read(unsigned int & value, Grille * g)
-{
+bool Jeu::read(unsigned int & value, Grille * g) {
     // on ne fait pas la distinction entre la dimX et la dimY de la grille car la taille du morpion restera 3*3.
     // Si on venait à faire un morpion avec des dimensions X et Y différentes, il faudrait en revanche vérifier la saisie de la valeur en fonction de
     // la saisie en cours (colonne ou ligne)
@@ -45,8 +44,7 @@ bool Jeu::read(unsigned int & value, Grille * g)
     return true;
 }
 
-void Jeu::readLineAndCol(unsigned int &line, unsigned int &col, Grille* g)
-{
+void Jeu::readLineAndCol(unsigned int &line, unsigned int &col, Grille* g) {
     std::cin.clear();
     std::cin.ignore( std::numeric_limits<std::streamsize>::max(), '\n' );
     std::cout <<"Veuillez choisir la colonne"<<std::endl;
@@ -82,8 +80,7 @@ void Jeu::start() {
             break;
 
         case 3 :
-            //IA(a_b)
-            std::cout<<"Programmation en cours ;)";
+            PvIA_alphaBeta();
             break;
 
         default : std::cout<<"choix non valide"<<std::endl;
@@ -91,9 +88,7 @@ void Jeu::start() {
     }
 }
 
-
-void Jeu::PvP()
-{
+void Jeu::PvP() {
     std::string tmp;
 
     // mess de bienvenue
@@ -232,6 +227,89 @@ void Jeu::PvIA_minMax() {
         }
         else if(round >= 10)
         {
+            grille->affichage();
+            std::cout<<"Match nul ! Partie terminee. " <<std::endl;
+            return;
+        }
+        else
+        {
+            std::cout<<std::endl;
+            // on affiche la grille
+            grille->affichage();
+
+            // on demande à l'utilisateur de saisir une colonne
+            std::cout<<"Tour de l'IA"<<std::endl;
+
+            // si la saisie est correcte
+            IA->remplirArbre(*grille, J2);
+            IA->minMax(col, row, 9-(round-1), false);
+            grille->getCase(col, row).setMotif(J2);
+
+            //le pion a bien été placé
+            round++;
+            // si l'IA a gagné
+            if(grille->gagne(tmp))
+            {
+                grille->affichage();
+                // victoire
+                std::cout<<"IA (O) gagne ! "<<std::endl;
+                // fin
+                return;
+            }
+            else if(round >= 10)
+            {
+                grille->affichage();
+                std::cout<<"Match nul ! Partie terminee. " <<std::endl;
+                return;
+            }
+        }
+    }
+    while(!grille->gagne(tmp) && round <= 10);
+}
+
+void Jeu::PvIA_alphaBeta() {
+    std::string tmp;
+
+    // mess de bienvenue
+    std::cout<<"Bienvenue sur le jeu du Morpion. "
+               "Joueur 1 commence ! "<<std::endl;
+    do
+    {
+        // on affiche la grille
+        grille->affichage();
+        // on demande à l'utilisateur de saisir une colonne
+        std::cout<<"Joueur 1 : Entrez la colonne ou vous souhaitez placer votre pion."<<std::endl;
+        // si la saisie est correcte
+        if(read(col, grille))
+        {
+            // on rappelle le choix fait
+            std::cout << "Vous avez choisi la colonne : " << col << std::endl;
+            std::cout<<"Joueur 1 : Entrez la ligne ou vous souhaitez placer votre pion."<<std::endl;
+            if(read(row, grille))
+            {
+                // on rappelle le choix fait
+                std::cout << "Vous avez choisi la ligne : " << row << std::endl;
+                while(grille->getCase(row - 1, col - 1).getMotif() != " ")
+                {
+                    std::cerr << "Un pion est deja place ici ! Recommencez. " <<std::endl;
+                    readLineAndCol(row, col, grille);
+                }
+            }
+        }
+        grille->getCase(row - 1, col - 1).setMotif(J1);
+        //le pion a bien été placé
+        round++;
+        // si le joueur 1 a gagné
+        if(grille->gagne(tmp))
+        {
+            grille->affichage();
+            // victoire
+            std::cout<<"Joueur 1 (X) gagne ! "<<std::endl;
+            // fin
+            return;
+        }
+        else if(round >= 10)
+        {
             std::cout<<"Match nul ! Partie terminee. " <<std::endl;
             return;
         }
@@ -242,21 +320,20 @@ void Jeu::PvIA_minMax() {
             grille->affichage();
             // on demande à l'utilisateur de saisir une colonne
             std::cout<<"Tour de l'IA"<<std::endl;
-            // si la saisie est correcte
 
 
             IA->remplirArbre(*grille, J2);
-            IA->minMax(col, row, 9-(round-1), false);
+            IA->alphaBeta(col, row, std::numeric_limits<int>::min(), std::numeric_limits<int>::max(), true);
             grille->getCase(col, row).setMotif(J2);
 
             //le pion a bien été placé
             round++;
-            // si le joueur 2 a gagné
+            // si l'IA a gagné
             if(grille->gagne(tmp))
             {
                 grille->affichage();
                 // victoire
-                std::cout<<"Joueur 2 (O) gagne ! "<<std::endl;
+                std::cout<<"IA (O) gagne ! "<<std::endl;
                 // fin
                 return;
             }

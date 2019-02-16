@@ -5,26 +5,10 @@
 #include <iostream>
 #include "ArbreGrilleIA.h"
 
-Grille &ArbreGrilleIA::getGrille() {
-    return g;
-}
-
-void ArbreGrilleIA::setGrille(const Grille &g) {
-    ArbreGrilleIA::g = g;
-}
-
-std::vector<ArbreGrilleIA> &ArbreGrilleIA::getChildren() {
-    return children;
-}
-
-void ArbreGrilleIA::setChildren(const std::vector<ArbreGrilleIA> &children) {
-    ArbreGrilleIA::children = children;
-}
-
-
-void ArbreGrilleIA::remplirArbre(const Grille g, std::string joueur) {
+void ArbreGrilleIA::remplirArbre(Grille g, std::string joueur) {
     this->g = g;
     this->children.clear();
+
     if (!this->g.complet()) {
         Grille tmp = g;
         ArbreGrilleIA * child;
@@ -59,10 +43,8 @@ int ArbreGrilleIA::minMax(unsigned int & x, unsigned int & y, unsigned int dept,
          */
         x = this->x;
         y = this->y;
-        if (joueur == "O")
-            bestValue = 10;
-        else
-            bestValue = -10;
+
+        bestValue = (joueur == "O") ? 10 : -10;
 
     }else if (dept == 0 || this->children.empty()) {
         /**
@@ -70,6 +52,7 @@ int ArbreGrilleIA::minMax(unsigned int & x, unsigned int & y, unsigned int dept,
          */
         x = this->x;
         y = this->y;
+
         bestValue = 0;
 
     } else {
@@ -100,6 +83,50 @@ int ArbreGrilleIA::minMax(unsigned int & x, unsigned int & y, unsigned int dept,
 
         x = tmp_x;
         y = tmp_y;
+    }
+
+    this->value = bestValue;
+
+    return this->value;
+}
+
+int ArbreGrilleIA::alphaBeta(unsigned int & x, unsigned int & y, int alpha, int beta, bool maximizingPlayer) {
+    std::string joueur;
+    int value, bestValue;
+
+    if (this->g.gagne(joueur)) {
+        /*
+         * Cas ou un joueur a gagné un apartie
+         */
+        x = this->x;
+        y = this->y;
+
+        bestValue = (joueur == "O") ? 10 : -10;
+
+    }else if (this->children.empty()) {
+        /*
+         * Cas ou la partie est un match nulle
+         */
+        x = this->x;
+        y = this->y;
+        bestValue = 0;
+
+    } else if (maximizingPlayer) {
+        bestValue = std::numeric_limits<int>::min();
+        for(ArbreGrilleIA child : children) {
+            value = child.alphaBeta(x, y, alpha, beta, !maximizingPlayer);
+            bestValue = std::max(bestValue, value);
+            alpha = std::max(alpha, bestValue);
+            if (alpha >= beta) break;
+        }
+    }else {
+        bestValue = std::numeric_limits<int>::max();
+        for(ArbreGrilleIA child : children) {
+            value = child.alphaBeta(x, y, alpha, beta, !maximizingPlayer);
+            bestValue = std::min(bestValue, value);
+            beta = std::min(beta, bestValue);
+            if (alpha >= beta) break;
+        }
     }
 
     this->value = bestValue;
