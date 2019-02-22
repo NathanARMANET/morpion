@@ -6,57 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/main.cpp
-iostream
--
-src/Grille.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
-src/ArbreGrilleIA.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
-src/Jeu.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h
-
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.cpp
-iostream
--
-ArbreGrilleIA.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
-
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/ArbreGrilleIA.h
 vector
 -
 Grille.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Grille.h
 
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.cpp
-Case.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
-
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Case.h
 string
 -
 
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.cpp
-iostream
--
-Grille.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
-assert.h
--
-
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Grille.h
 Case.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Case.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Case.h
 
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.cpp
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Jeu.cpp
 iostream
 -
 Jeu.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Jeu.h
+limits
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/limits
 
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Jeu.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Jeu.h
 Grille.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/Grille.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/Grille.h
 ArbreGrilleIA.h
-/Users/nathan/Documents/Polytech/3A/S6/algo-cpx/TP/morpion/src/ArbreGrilleIA.h
+C:/Users/Dorian/Desktop/POLYTECH 2018-2021/S6/Algo et Complexite/Projets/Morpion-pull-3/morpion/src/ArbreGrilleIA.h
 

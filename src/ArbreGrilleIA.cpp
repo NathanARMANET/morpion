@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "ArbreGrilleIA.h"
-
+#include <limits>
 void ArbreGrilleIA::remplirArbre(Grille g, std::string joueur) {
     this->g = g;
     this->children.clear();

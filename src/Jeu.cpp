@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Jeu.h"
+#include "limits"
 
 Jeu::Jeu() {
     grille = new Grille();
