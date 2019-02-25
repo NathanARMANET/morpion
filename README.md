@@ -11,3 +11,14 @@
 ## Contexte
 
 projet Algo et cpx S6
+
+## Compilation
+
+Pour compiler le projet, nous utilisons un *MakeFile* permettant d'éxécuter les commandes suivantes :
+- **make** ou **make all**
+    - compile l'éxécutable du projet (bin/morpion) avec toutes les dépendances (obj/*.o)
+- **make clean**
+    - supprime les fichiers .o du sous-dossier obj/
+- **make veryclean**
+    - supprime l'éxécutable dans le sous-dossier bin/
+    - msupprime les fichiers .o du sous-dossier obj/
